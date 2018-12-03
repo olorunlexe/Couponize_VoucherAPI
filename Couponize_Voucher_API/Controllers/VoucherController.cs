@@ -21,7 +21,7 @@ namespace Couponize_Voucher_API.Controllers
         }
 
         [HttpPost("{code}")]
-        public async Task<ActionResult> Create(string code, [FromBody] CreateVoucherModel create)
+        public async Task<ActionResult> Create(string code, [FromBody] VoucherModel create)
         {
             
             Voucher voucher = new Voucher(create.Code, create.Voucher_Type, create.Category, create.AdditionalInfo, create.StartDate, create.ExpirationDate, create.Active);
@@ -31,7 +31,7 @@ namespace Couponize_Voucher_API.Controllers
             Code_Config code_Config = new Code_Config(create.Prefix, create.Suffix, create.CodeLength, create.CharSet);
             MetaData metadata = new MetaData(create.Test,create.Locale);
             ServiceResponse response = await CreateVoucherRequest.CreateVoucherAsync(voucher,discount,gift,redemption,code_Config,metadata);
-            return Ok(create);
+            return Ok(response);
         }
 
         [HttpGet("{code}")]

@@ -9,7 +9,7 @@ namespace VoucherDependencies.Domain
 {
     public class Gift
     {
-        private Int64 Amount { get; set; }
+        public Int64 Amount { get; }
 
         public Gift(Int64 amount)
         {

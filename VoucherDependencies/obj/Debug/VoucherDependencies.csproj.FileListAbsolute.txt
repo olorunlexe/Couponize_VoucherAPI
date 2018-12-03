@@ -214,3 +214,5 @@ C:\Users\therapy\source\repos\Couponize_VoucherAPI\VoucherDependencies\obj\Debug
 C:\Users\therapy\source\repos\Couponize_VoucherAPI\VoucherDependencies\obj\Debug\VoucherDependencies.csproj.CopyComplete
 C:\Users\therapy\source\repos\Couponize_VoucherAPI\VoucherDependencies\obj\Debug\VoucherDependencies.dll
 C:\Users\therapy\source\repos\Couponize_VoucherAPI\VoucherDependencies\obj\Debug\VoucherDependencies.pdb
+C:\Users\therapy\source\repos\Couponize_VoucherAPI\VoucherDependencies\bin\Debug\Dapper.dll
+C:\Users\therapy\source\repos\Couponize_VoucherAPI\VoucherDependencies\bin\Debug\Dapper.xml
