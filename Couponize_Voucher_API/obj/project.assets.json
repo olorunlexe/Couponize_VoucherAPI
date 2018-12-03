@@ -12594,11 +12594,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Stephen\\Documents\\Visual Studio 2017\\Projects\\Couponize_VoucherAPI\\Couponize_Voucher_API\\Couponize_Voucher_API.csproj",
+      "projectUniqueName": "C:\\Users\\Stephen\\Documents\\Visual Studio 2017\\Projects\\Couponize_Voucher_API\\Couponize_VoucherAPI\\Couponize_Voucher_API\\Couponize_Voucher_API.csproj",
       "projectName": "Couponize_Voucher_API",
-      "projectPath": "C:\\Users\\Stephen\\Documents\\Visual Studio 2017\\Projects\\Couponize_VoucherAPI\\Couponize_Voucher_API\\Couponize_Voucher_API.csproj",
+      "projectPath": "C:\\Users\\Stephen\\Documents\\Visual Studio 2017\\Projects\\Couponize_Voucher_API\\Couponize_VoucherAPI\\Couponize_Voucher_API\\Couponize_Voucher_API.csproj",
       "packagesPath": "C:\\Users\\Stephen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Stephen\\Documents\\Visual Studio 2017\\Projects\\Couponize_VoucherAPI\\Couponize_Voucher_API\\obj\\",
+      "outputPath": "C:\\Users\\Stephen\\Documents\\Visual Studio 2017\\Projects\\Couponize_Voucher_API\\Couponize_VoucherAPI\\Couponize_Voucher_API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12617,8 +12617,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Stephen\\Documents\\Visual Studio 2017\\Projects\\Couponize_VoucherAPI\\VoucherDependencies\\VoucherDependencies.csproj": {
-              "projectPath": "C:\\Users\\Stephen\\Documents\\Visual Studio 2017\\Projects\\Couponize_VoucherAPI\\VoucherDependencies\\VoucherDependencies.csproj"
+            "C:\\Users\\Stephen\\Documents\\Visual Studio 2017\\Projects\\Couponize_Voucher_API\\Couponize_VoucherAPI\\VoucherDependencies\\VoucherDependencies.csproj": {
+              "projectPath": "C:\\Users\\Stephen\\Documents\\Visual Studio 2017\\Projects\\Couponize_Voucher_API\\Couponize_VoucherAPI\\VoucherDependencies\\VoucherDependencies.csproj"
             }
           }
         }
