@@ -53,7 +53,8 @@
     <Compile Include="Domain\MetaData.cs" />
     <Compile Include="Domain\Redemption.cs" />
     <Compile Include="Domain\Voucher.cs" />
-    <Compile Include="Model\CreateModel.cs" />
+    <Compile Include="Model\CreateVoucherModel.cs" />
+    <Compile Include="Model\GetVoucherModel.cs" />
     <Compile Include="Util\ApiAdvice.cs" />
     <Compile Include="Util\Discount_Type.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
