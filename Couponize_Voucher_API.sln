@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.106
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Couponize_Voucher_API", "Couponize_Voucher_API\Couponize_Voucher_API.csproj", "{84FF8925-E381-46C5-8F6D-4C8658F27A22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VoucherDependencies", "VoucherDependencies\VoucherDependencies.csproj", "{1360D8F4-F7F4-4FA6-B3A7-54E5C9B96602}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{84FF8925-E381-46C5-8F6D-4C8658F27A22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84FF8925-E381-46C5-8F6D-4C8658F27A22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84FF8925-E381-46C5-8F6D-4C8658F27A22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84FF8925-E381-46C5-8F6D-4C8658F27A22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1360D8F4-F7F4-4FA6-B3A7-54E5C9B96602}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1360D8F4-F7F4-4FA6-B3A7-54E5C9B96602}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1360D8F4-F7F4-4FA6-B3A7-54E5C9B96602}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1360D8F4-F7F4-4FA6-B3A7-54E5C9B96602}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C498F258-A734-4215-BACA-E3FD3F47B1D6}
+	EndGlobalSection
+EndGlobal
