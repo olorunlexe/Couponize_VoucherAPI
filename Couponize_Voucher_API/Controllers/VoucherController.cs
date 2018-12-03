@@ -21,7 +21,7 @@ namespace Couponize_Voucher_API.Controllers
         }
 
         [HttpPost("{code}")]
-        public async Task<ActionResult> Create(string code, [FromBody] CreateModel create)
+        public async Task<ActionResult> Create(string code, [FromBody] CreateVoucherModel create)
         {
             
             Voucher voucher = new Voucher(create.Code, create.Voucher_Type, create.Category, create.AdditionalInfo, create.StartDate, create.ExpirationDate, create.Active);
