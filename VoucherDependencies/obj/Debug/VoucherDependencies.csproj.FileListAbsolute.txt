@@ -103,3 +103,9 @@ C:\Users\Stephen\Documents\Visual Studio 2017\Projects\Couponize_Voucher_API\Vou
 C:\Users\Stephen\Documents\Visual Studio 2017\Projects\Couponize_Voucher_API\VoucherDependencies\obj\Debug\VoucherDependencies.csproj.CopyComplete
 C:\Users\Stephen\Documents\Visual Studio 2017\Projects\Couponize_Voucher_API\VoucherDependencies\obj\Debug\VoucherDependencies.dll
 C:\Users\Stephen\Documents\Visual Studio 2017\Projects\Couponize_Voucher_API\VoucherDependencies\obj\Debug\VoucherDependencies.pdb
+C:\Users\Stephen\Documents\Visual Studio 2017\Projects\Couponize_Voucher_API\Couponize_VoucherAPI\VoucherDependencies\bin\Debug\VoucherDependencies.dll
+C:\Users\Stephen\Documents\Visual Studio 2017\Projects\Couponize_Voucher_API\Couponize_VoucherAPI\VoucherDependencies\bin\Debug\VoucherDependencies.pdb
+C:\Users\Stephen\Documents\Visual Studio 2017\Projects\Couponize_Voucher_API\Couponize_VoucherAPI\VoucherDependencies\obj\Debug\VoucherDependencies.csprojAssemblyReference.cache
+C:\Users\Stephen\Documents\Visual Studio 2017\Projects\Couponize_Voucher_API\Couponize_VoucherAPI\VoucherDependencies\obj\Debug\VoucherDependencies.csproj.CoreCompileInputs.cache
+C:\Users\Stephen\Documents\Visual Studio 2017\Projects\Couponize_Voucher_API\Couponize_VoucherAPI\VoucherDependencies\obj\Debug\VoucherDependencies.dll
+C:\Users\Stephen\Documents\Visual Studio 2017\Projects\Couponize_Voucher_API\Couponize_VoucherAPI\VoucherDependencies\obj\Debug\VoucherDependencies.pdb
