@@ -11,11 +11,11 @@ namespace VoucherDependencies.Domain
     public class Discount
     {
         public Discount_Type Discount_type { get; }
-        private float Percent_Off { get; }
-        private Int64 Amount_Off { get; }
-        private Int64 AmountLimit { get; }
-        private float Unit_Off { get; }
-        private string Unit_Type { get; }
+        public float Percent_Off { get; }
+        public Int64 Amount_Off { get; }
+        public Int64 AmountLimit { get; }
+        public float Unit_Off { get; }
+        public string Unit_Type { get; }
 
         public Discount(Discount_Type discount_type, float percent_Off, Int64 amount_Off, Int64 amount_Limit, float unit_Off, string unit_Type)
         {

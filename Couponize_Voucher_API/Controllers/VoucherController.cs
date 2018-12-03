@@ -23,7 +23,6 @@ namespace Couponize_Voucher_API.Controllers
         [HttpPost("{code}")]
         public async Task<ActionResult> Create(string code, [FromBody] VoucherModel create)
         {
-            
             Voucher voucher = new Voucher(create.Code, create.Voucher_Type, create.Category, create.AdditionalInfo, create.StartDate, create.ExpirationDate, create.Active);
             Discount discount = new Discount(create.Discount_Type, create.Percent_Off, create.Amount_Off, create.AmountLimit, create.Unit_Off, create.UnitType);
             Gift gift = new Gift(create.Amount);

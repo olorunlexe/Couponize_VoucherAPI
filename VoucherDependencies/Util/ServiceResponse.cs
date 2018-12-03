@@ -8,9 +8,9 @@ namespace VoucherDependencies.Util
 {
     public class ServiceResponse
     {
-        private string Code { get; }
-        private string Message { get; }
-        private string Description { get; }
+        public string Code { get; }
+        public string Message { get; }
+        public string Description { get; }
 
         public ServiceResponse(string code, string message, string description)
         {
@@ -19,12 +19,16 @@ namespace VoucherDependencies.Util
             this.Description = description;
         }
 
-        public override string ToString()
-        {
-            return "Response {" + 
-                "ResponseCode='" + Code + '\'' + 
-                ", Message='" + Message + '\'' + 
-                ", Description='" + Description + '\'' +"}";
-        }
+
+        //public override string ToString()
+        //{
+        //    return "Response {" + 
+        //        "ResponseCode='" + Code + '\'' + 
+        //        ", Message='" + Message + '\'' + 
+        //        ", Description='" + Description + '\'' +"}";
+        //}
+
+
+
     }
 }

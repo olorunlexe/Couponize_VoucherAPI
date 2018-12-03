@@ -9,17 +9,11 @@ namespace VoucherDependencies.Domain
 {
     public class Redemption
     {
-        private int Quantity;
+        public int Quantity { get; set; }
 
         public Redemption(int quantity)
         {
-            this.Quantity = quantity;
+            Quantity = quantity;
         }
-
-        public int GetQuantity()
-        {
-            return Quantity;
-        }
-     
     }
 }

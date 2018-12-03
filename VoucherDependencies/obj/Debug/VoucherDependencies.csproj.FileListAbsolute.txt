@@ -216,3 +216,6 @@ C:\Users\therapy\source\repos\Couponize_VoucherAPI\VoucherDependencies\obj\Debug
 C:\Users\therapy\source\repos\Couponize_VoucherAPI\VoucherDependencies\obj\Debug\VoucherDependencies.pdb
 C:\Users\therapy\source\repos\Couponize_VoucherAPI\VoucherDependencies\bin\Debug\Dapper.dll
 C:\Users\therapy\source\repos\Couponize_VoucherAPI\VoucherDependencies\bin\Debug\Dapper.xml
+C:\Users\Stephen\Documents\Visual Studio 2017\Projects\Couponize_Voucher_API\Couponize_VoucherAPI\VoucherDependencies\bin\Debug\Dapper.dll
+C:\Users\Stephen\Documents\Visual Studio 2017\Projects\Couponize_Voucher_API\Couponize_VoucherAPI\VoucherDependencies\bin\Debug\Dapper.xml
+C:\Users\Stephen\Documents\Visual Studio 2017\Projects\Couponize_Voucher_API\Couponize_VoucherAPI\VoucherDependencies\obj\Debug\VoucherDependencies.csproj.CopyComplete

@@ -30,7 +30,7 @@ namespace VoucherDependencies.Api
                     parameters.Add("@GiftAmount", gift.Amount);
                     parameters.Add("@Active", voucher.Active);
 
-                    rowAffected = con.Execute("InsertVoucher", parameters, commandType: CommandType.StoredProcedure);
+                    rowAffected = await con.ExecuteAsync("InsertVoucher", parameters, commandType: CommandType.StoredProcedure);
                 }
 
                ServiceResponse response = new ServiceResponse("0", "Good Request", "Request Completed");
@@ -39,10 +39,10 @@ namespace VoucherDependencies.Api
             catch (Exception e)
             {
                 //String except = e.Message;
-                ServiceResponse response = new ServiceResponse("100","","Request could not be completed");
+                ServiceResponse response = new ServiceResponse("100","Unsuccessful","Request could not be completed");
                 return response;
             }
-            return null;
+            
         }
 
        

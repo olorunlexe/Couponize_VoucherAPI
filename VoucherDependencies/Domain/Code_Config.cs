@@ -9,10 +9,10 @@ namespace VoucherDependencies.Domain
 {
     public class Code_Config
     {
-        private readonly string prefix;
-        private readonly string suffix;
-        private readonly int length;
-        private readonly CharSet charset;
+        public readonly string prefix;
+        public readonly string suffix;
+        public readonly int length;
+        public readonly CharSet charset;
 
         public Code_Config(string prefix, string suffix, int length, CharSet charset)
         {

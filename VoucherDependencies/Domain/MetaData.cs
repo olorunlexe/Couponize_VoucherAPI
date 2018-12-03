@@ -8,7 +8,7 @@ namespace VoucherDependencies.Domain
 {
     public class MetaData
     {
-        private Dictionary<bool,string> Meta_Data { get; set; }
+        public Dictionary<bool,string> Meta_Data { get; set; }
 
         public MetaData(bool test, string locale)
         {
