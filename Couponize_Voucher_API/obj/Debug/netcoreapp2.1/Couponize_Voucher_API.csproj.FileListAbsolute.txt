@@ -25,3 +25,21 @@ C:\Users\Stephen\Documents\Visual Studio 2017\Projects\Couponize_Voucher_API\Cou
 C:\Users\Stephen\Documents\Visual Studio 2017\Projects\Couponize_Voucher_API\Couponize_VoucherAPI\Couponize_Voucher_API\obj\Debug\netcoreapp2.1\Couponize_Voucher_API.AssemblyInfo.cs
 C:\Users\Stephen\Documents\Visual Studio 2017\Projects\Couponize_Voucher_API\Couponize_VoucherAPI\Couponize_Voucher_API\obj\Debug\netcoreapp2.1\Couponize_Voucher_API.dll
 C:\Users\Stephen\Documents\Visual Studio 2017\Projects\Couponize_Voucher_API\Couponize_VoucherAPI\Couponize_Voucher_API\obj\Debug\netcoreapp2.1\Couponize_Voucher_API.pdb
+C:\Users\therapy\source\repos\Couponize_VoucherAPI\Couponize_Voucher_API\bin\Debug\netcoreapp2.1\Couponize_Voucher_API.deps.json
+C:\Users\therapy\source\repos\Couponize_VoucherAPI\Couponize_Voucher_API\bin\Debug\netcoreapp2.1\Couponize_Voucher_API.runtimeconfig.json
+C:\Users\therapy\source\repos\Couponize_VoucherAPI\Couponize_Voucher_API\bin\Debug\netcoreapp2.1\Couponize_Voucher_API.runtimeconfig.dev.json
+C:\Users\therapy\source\repos\Couponize_VoucherAPI\Couponize_Voucher_API\bin\Debug\netcoreapp2.1\Couponize_Voucher_API.dll
+C:\Users\therapy\source\repos\Couponize_VoucherAPI\Couponize_Voucher_API\bin\Debug\netcoreapp2.1\Couponize_Voucher_API.pdb
+C:\Users\therapy\source\repos\Couponize_VoucherAPI\Couponize_Voucher_API\bin\Debug\netcoreapp2.1\VoucherDependencies.dll
+C:\Users\therapy\source\repos\Couponize_VoucherAPI\Couponize_Voucher_API\bin\Debug\netcoreapp2.1\VoucherDependencies.pdb
+C:\Users\therapy\source\repos\Couponize_VoucherAPI\Couponize_Voucher_API\obj\Debug\netcoreapp2.1\Couponize_Voucher_API.csprojAssemblyReference.cache
+C:\Users\therapy\source\repos\Couponize_VoucherAPI\Couponize_Voucher_API\obj\Debug\netcoreapp2.1\Couponize_Voucher_API.csproj.CoreCompileInputs.cache
+C:\Users\therapy\source\repos\Couponize_VoucherAPI\Couponize_Voucher_API\obj\Debug\netcoreapp2.1\Couponize_Voucher_API.RazorAssemblyInfo.cache
+C:\Users\therapy\source\repos\Couponize_VoucherAPI\Couponize_Voucher_API\obj\Debug\netcoreapp2.1\Couponize_Voucher_API.RazorAssemblyInfo.cs
+C:\Users\therapy\source\repos\Couponize_VoucherAPI\Couponize_Voucher_API\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\therapy\source\repos\Couponize_VoucherAPI\Couponize_Voucher_API\obj\Debug\netcoreapp2.1\Couponize_Voucher_API.AssemblyInfoInputs.cache
+C:\Users\therapy\source\repos\Couponize_VoucherAPI\Couponize_Voucher_API\obj\Debug\netcoreapp2.1\Couponize_Voucher_API.AssemblyInfo.cs
+C:\Users\therapy\source\repos\Couponize_VoucherAPI\Couponize_Voucher_API\obj\Debug\netcoreapp2.1\Couponize_Voucher_API.RazorTargetAssemblyInfo.cache
+C:\Users\therapy\source\repos\Couponize_VoucherAPI\Couponize_Voucher_API\obj\Debug\netcoreapp2.1\Couponize_Voucher_API.csproj.CopyComplete
+C:\Users\therapy\source\repos\Couponize_VoucherAPI\Couponize_Voucher_API\obj\Debug\netcoreapp2.1\Couponize_Voucher_API.dll
+C:\Users\therapy\source\repos\Couponize_VoucherAPI\Couponize_Voucher_API\obj\Debug\netcoreapp2.1\Couponize_Voucher_API.pdb

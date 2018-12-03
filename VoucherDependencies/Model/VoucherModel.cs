@@ -7,7 +7,7 @@ using VoucherDependencies.Util;
 
 namespace VoucherDependencies.Model
 {
-    public class CreateModel
+    public class CreateVoucherModel
     {
         public string Code { get; set; }
         public Voucher_Type Voucher_Type { get; set; }
