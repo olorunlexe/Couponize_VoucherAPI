@@ -31,7 +31,7 @@ namespace Couponize_Voucher_API.Controllers
             MetaData metadata = new MetaData(create.Test,create.Locale);
             ServiceResponse response = await CreateVoucherRequest.CreateVoucherAsync(voucher,discount,gift,redemption,code_Config,metadata);
 
-            switch (Response.StatusCode==200) {
+            switch (Response.StatusCode == 200) {
                 case true:
                     return Ok(create);
                 default:
