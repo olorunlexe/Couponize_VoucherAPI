@@ -30,7 +30,14 @@ namespace Couponize_Voucher_API.Controllers
             Code_Config code_Config = new Code_Config(create.Prefix, create.Suffix, create.CodeLength, create.CharSet);
             MetaData metadata = new MetaData(create.Test,create.Locale);
             ServiceResponse response = await CreateVoucherRequest.CreateVoucherAsync(voucher,discount,gift,redemption,code_Config,metadata);
-            return Ok(response);
+
+            switch (Response.StatusCode==200) {
+                case true:
+                    return Ok(create);
+                default:
+                    return Ok(response);
+            }
+        
         }
 
         [HttpGet("{code}")]
