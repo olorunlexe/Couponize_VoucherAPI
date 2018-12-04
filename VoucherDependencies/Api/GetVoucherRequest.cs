@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Dapper;
+using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,19 +12,49 @@ namespace VoucherDependencies.Api
 {
     public class GetVoucherRequest
     {
+        static string strConnectionString = "User Id=sa;Password=Deolu007@;Database=VoucherTest;";
 
-        public async Task<VoucherModel> GetVoucherAsync(string code)
+      
+        public static async Task<VoucherModel> GetVoucherAsync(string code)
         {
-            try
-            {
-                VoucherModel get = null;
+            VoucherModel voucher = new VoucherModel();
 
-                return null;
-            }
-            catch
+            using (var connection = new SqlConnection(strConnectionString))
             {
-                return null;
+                await connection.OpenAsync();
+
+                IDataReader reader = await connection.ExecuteReaderAsync("GetVoucherByCode",
+                                new { Code = code },
+                                commandType: CommandType.StoredProcedure);
+
+               
+
+                while (reader.Read())
+                {
+                    voucher.Code = reader["code"].ToString();
+                    voucher.Amount = Convert.ToInt64(reader["giftAmount"].ToString());
+
+                }
+                reader.Close();
+                
             }
-        } 
+            return voucher;
+        }
+
+        //For Listing Vouchers
+        //public static IEnumerable<VoucherModel> GetPerson()
+        //{
+        //    List<VoucherModel> orderList = new List<VoucherModel>();
+
+        //    using (IDbConnection con = new SqlConnection(strConnectionString))
+        //    {
+        //        if (con.State == ConnectionState.Closed)
+        //            con.Open();
+
+        //        orderList = con.Query<VoucherModel>("GetVoucher").ToList();
+        //    }
+
+        //    return orderList;
+        //}
     }
 }
