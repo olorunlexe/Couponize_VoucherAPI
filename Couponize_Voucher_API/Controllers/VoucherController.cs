@@ -30,23 +30,21 @@ namespace Couponize_Voucher_API.Controllers
             Code_Config code_Config = new Code_Config(create.Prefix, create.Suffix, create.CodeLength, create.CharSet);
             MetaData metadata = new MetaData(create.Test,create.Locale);
             ServiceResponse response = await CreateVoucherRequest.CreateVoucherAsync(voucher,discount,gift,redemption,code_Config,metadata);
-            return Ok(response);
+            return await Task.Run(() => Get(code));
         }
 
         [HttpGet("{code}")]
         public async Task<ActionResult> Get(string code)
         {
-            CreateVoucherRequest createVoucherRequest = new CreateVoucherRequest();
-            
-
-            return Ok("Not yet Implemented");
+            VoucherModel get = await GetVoucherRequest.GetVoucherAsync(code);
+            return Ok(get);
         }
 
         [HttpPut("{code}")]
-        public async Task<ActionResult> Update(string code)
+        public async Task<ActionResult> Update(string code, [FromBody] VoucherModel model)
         {
 
-            return new JsonResult(Response);
+            return Ok(Response);
         }
 
         [HttpDelete("{code}")]

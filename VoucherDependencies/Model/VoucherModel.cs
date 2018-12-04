@@ -35,6 +35,6 @@ namespace VoucherDependencies.Model
         public bool Test { get; set; }
         public string Locale { get; set; }
 
-
+        
     }
 }
