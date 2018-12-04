@@ -2,3 +2,4 @@
 .dtbcache
 .vs/Couponize_Voucher_API/DesignTimeBuild/.dtbcache
 .vs/Couponize_Voucher_API/v15/.suo
+*.cache

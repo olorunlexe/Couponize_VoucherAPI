@@ -34,7 +34,7 @@ namespace Couponize_Voucher_API.Controllers
         }
 
         [HttpGet("{code}")]
-        public async Task<ActionResult> get(string code)
+        public async Task<ActionResult> Get(string code)
         {
             CreateVoucherRequest createVoucherRequest = new CreateVoucherRequest();
             
