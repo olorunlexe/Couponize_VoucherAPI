@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Data;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using VoucherDependencies.Api;
@@ -43,10 +44,10 @@ namespace Couponize_Voucher_API.Controllers
         [HttpGet("{code}")]
         public async Task<ActionResult> Get(string code)
         {
-            CreateVoucherRequest createVoucherRequest = new CreateVoucherRequest();
-            
+            VoucherModel result;
+            result = await GetVoucherRequest.GetVoucherAsync(code);
+            return Ok(result);
 
-            return Ok("Not yet Implemented");
         }
 
         [HttpPut("{code}")]
