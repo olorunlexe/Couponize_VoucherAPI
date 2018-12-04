@@ -33,13 +33,13 @@ namespace VoucherDependencies.Api
                     rowAffected = await con.ExecuteAsync("InsertVoucher", parameters, commandType: CommandType.StoredProcedure);
                 }
 
-               ServiceResponse response = new ServiceResponse("200", "Good Request", "Request Completed");
+               ServiceResponse response = new ServiceResponse("0", "Good Request", "Request Completed");
                return response;
             }
             catch (Exception e)
             {
                 //String except = e.Message;
-                ServiceResponse response = new ServiceResponse("407","Unsuccessful","Request could not be completed");
+                ServiceResponse response = new ServiceResponse("100","Unsuccessful","Request could not be completed");
                 return response;
             }
             

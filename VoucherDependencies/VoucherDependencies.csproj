@@ -58,7 +58,6 @@
     <Compile Include="Domain\Voucher.cs" />
     <Compile Include="Model\VoucherModel.cs" />
     <Compile Include="Util\ApiAdvice.cs" />
-    <Compile Include="Util\CodeGenerator.cs" />
     <Compile Include="Util\Discount_Type.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\Charset.cs" />
