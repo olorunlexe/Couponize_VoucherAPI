@@ -14,24 +14,31 @@ namespace Couponize_Voucher_API.Controllers
     [ApiController]
     public class VoucherController : ControllerBase
     {
-        
+        //Welcome Screen to Hold docs later
         [HttpGet]
         public async Task<ActionResult<IEnumerable<string>>> VoucherApi()
         { 
             return await Task.Run(()=> new JsonResult("Welcome to Voucher Api"));
         }
 
+
+        //Post request using code at path to pass in values for Voucher creation
         [HttpPost("{code}")]
-        public async Task<ActionResult> Create(string code, [FromBody] VoucherModel create)
+        public async Task<ActionResult> CreateVoucher(string code, [FromBody] VoucherModel create)
         {
+            //Passing in values using "VoucherModel" into the Different Model to use params
             Voucher voucher = new Voucher(create.Code, create.Voucher_Type, create.Category, create.AdditionalInfo, create.StartDate, create.ExpirationDate, create.Active);
             Discount discount = new Discount(create.Discount_Type, create.Percent_Off, create.Amount_Off, create.AmountLimit, create.Unit_Off, create.UnitType);
             Gift gift = new Gift(create.Amount);
             Redemption redemption = new Redemption(create.Quantity);
             Code_Config code_Config = new Code_Config(create.Prefix, create.Suffix, create.CodeLength, create.CharSet);
             MetaData metadata = new MetaData(create.Test,create.Locale);
+
+            //Run CreateVoucherAsync Service and returns response with ServiceResponse class
             ServiceResponse response = await CreateVoucherRequest.CreateVoucherAsync(voucher,discount,gift,redemption,code_Config,metadata);
 
+
+            //Checks if response status code is 200, if true returns voucher params and values as Json data, else returns response(Not successful)
             switch (Response.StatusCode == 200) {
                 case true:
                     return Ok(create);
@@ -41,14 +48,18 @@ namespace Couponize_Voucher_API.Controllers
         
         }
 
+        //GET request action method for Querying Database for Voucher details specific to a code
         [HttpGet("{code}")]
-        public async Task<ActionResult> Get(string code)
+        public async Task<ActionResult> GetVoucher(string code)
         {
             VoucherModel result;
             result = await GetVoucherRequest.GetVoucherAsync(code);
             return Ok(result);
 
         }
+
+
+
 
         [HttpPut("{code}")]
         public async Task<ActionResult> Update(string code)
