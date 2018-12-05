@@ -15,6 +15,7 @@ namespace VoucherDependencies.Api
         static string strConnectionString = "User Id=sa;Password=Deolu007@;Database=VoucherTest;";
 
       
+        //Dapper method to use code param to get voucher from database..
         public static async Task<VoucherModel> GetVoucherAsync(string code)
         {
             VoucherModel voucher = new VoucherModel();
@@ -28,7 +29,7 @@ namespace VoucherDependencies.Api
                                 commandType: CommandType.StoredProcedure);
 
                
-
+                //Reader appending the values while stream is open to print out
                 while (reader.Read())
                 {
                     voucher.Code = reader["code"].ToString();

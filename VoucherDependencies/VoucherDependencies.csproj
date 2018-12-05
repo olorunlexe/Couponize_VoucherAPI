@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\CreateCode.cs" />
     <Compile Include="Api\CreateVoucherRequest.cs" />
     <Compile Include="Api\GetVoucherRequest.cs" />
     <Compile Include="Domain\Code_Config.cs" />
