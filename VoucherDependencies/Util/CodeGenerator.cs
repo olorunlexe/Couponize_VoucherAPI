@@ -12,8 +12,9 @@ namespace VoucherDependencies.Util
             string code;
             private string GenerateAlphaNumeric(int length)
             {
-                // Generate a random number
-                string characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+            // Generate a random number
+            Random random = new Random();
+            string characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
                 StringBuilder result = new StringBuilder(length);
                 for (int i = 0; i < length; i++)
                 {
@@ -23,8 +24,9 @@ namespace VoucherDependencies.Util
             }
             private string GenerateNumeric(int length)
             {
-                // Generate a random number
-                string characters = "0123456789";
+            // Generate a random number
+             Random random = new Random();
+            string characters = "0123456789";
                 StringBuilder result = new StringBuilder(length);
                 for (int i = 0; i < length; i++)
                 {
@@ -34,8 +36,9 @@ namespace VoucherDependencies.Util
             }
             private string GenerateAlphabetic(int length)
             {
-                // Generate a random number
-                string characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+            // Generate a random number
+            Random random = new Random();
+            string characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
                 StringBuilder result = new StringBuilder(length);
                 for (int i = 0; i < length; i++)
                 {
@@ -44,7 +47,7 @@ namespace VoucherDependencies.Util
                 return result.ToString();
             }
 
-            public string getGeneratedCode(string prefix, string suffix, int length, string charset)
+            public async Task<string> getGeneratedCode(string prefix, string suffix, int length, CharSet charset)
             {
                 int prefixLen = prefix.Length;
                 int suffixLen = suffix.Length;
@@ -52,15 +55,15 @@ namespace VoucherDependencies.Util
                 
                 CodeGenerator randgen = new CodeGenerator();
 
-                if (charset=="0")
+                if (charset.Equals(CharSet.Numeric))
                 {
                     code = prefix + randgen.GenerateNumeric(codeLength) +suffix;
                 }
-                else if (charset == "1")
+                else if (charset.Equals(CharSet.Alphabetic))
                 {
                     code = prefix + randgen.GenerateAlphabetic(codeLength) + suffix;
                 }
-                else if (charset == "2")
+                else if (charset.Equals(CharSet.Alphanumeric))
                 {
                     code = prefix + randgen.GenerateAlphaNumeric(codeLength) + suffix;
                 }
