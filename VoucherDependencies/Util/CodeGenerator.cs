@@ -45,7 +45,7 @@ namespace VoucherDependencies.Util
             return result.ToString();
         }
 
-        public async Task<string> getGeneratedCode(string prefix, string suffix, int length, CharSet charset)
+        public async Task<string> GetGeneratedCode(string prefix, string suffix, int length, CharSet charset)
         {
             int prefixLen = prefix.Length;
             int suffixLen = suffix.Length;

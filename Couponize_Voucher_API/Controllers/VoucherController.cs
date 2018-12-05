@@ -59,10 +59,10 @@ namespace Couponize_Voucher_API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult> createCode([FromBody] Code_Config code_Config)
+        public async Task<ActionResult> CreateCode([FromBody] Code_Config code_Config)
         {
 
-            string result = await CreateCode.createCode(code_Config);
+            string result = await VoucherDependencies.Api.CreateCode.createCode(code_Config);
 
             return Ok(result);
 

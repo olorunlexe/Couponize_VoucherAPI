@@ -20,7 +20,7 @@ namespace VoucherDependencies.Api
             try
             {
                 CodeGenerator codeGenerator = new CodeGenerator();
-                string result=await codeGenerator.getGeneratedCode(code_Config.prefix, code_Config.suffix, code_Config.length, code_Config.charset);
+                string result=await codeGenerator.GetGeneratedCode(code_Config.prefix, code_Config.suffix, code_Config.length, code_Config.charset);
 
                 //response using predefined serviceresponse class
                 ServiceResponse response = new ServiceResponse("0", "Good Request", "Request Completed");
