@@ -329,3 +329,5 @@ C:\Users\Stephen\Documents\Visual Studio 2017\Projects\Couponize_VoucherAPI\Vouc
 C:\Users\Stephen\Documents\Visual Studio 2017\Projects\Couponize_VoucherAPI\VoucherDependencies\bin\Debug\NLog.config
 C:\Users\Stephen\Documents\Visual Studio 2017\Projects\Couponize_VoucherAPI\VoucherDependencies\bin\Debug\NLog.dll
 C:\Users\Stephen\Documents\Visual Studio 2017\Projects\Couponize_VoucherAPI\VoucherDependencies\bin\Debug\NLog.xml
+C:\Users\Stephen\Documents\Visual Studio 2017\Projects\Couponize_VoucherAPI\VoucherDependencies\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Stephen\Documents\Visual Studio 2017\Projects\Couponize_VoucherAPI\VoucherDependencies\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml

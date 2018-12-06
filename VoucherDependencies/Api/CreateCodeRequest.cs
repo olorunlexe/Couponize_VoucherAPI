@@ -11,10 +11,10 @@ using VoucherDependencies.Util;
 
 namespace VoucherDependencies.Api
 {
-    public class CreateCode
+    public class CreateCodeRequest
     {
 
-        public static async Task<string> createCode(Code_Config code_Config)
+        public static async Task<string> CreateCode(Code_Config code_Config)
         {
 
             try

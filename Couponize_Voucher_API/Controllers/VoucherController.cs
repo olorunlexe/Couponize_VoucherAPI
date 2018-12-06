@@ -62,30 +62,44 @@ namespace Couponize_Voucher_API.Controllers
         public async Task<ActionResult> CreateCode([FromBody] Code_Config code_Config)
         {
 
-            string result = await VoucherDependencies.Api.CreateCode.createCode(code_Config);
+            string result = await VoucherDependencies.Api.CreateCodeRequest.CreateCode(code_Config);
 
             return Ok(result);
 
         }
 
-
-
-
         [HttpPut("{code}")]
-        public async Task<ActionResult> Update(string code)
+        public async Task<ActionResult> UpdateVoucher(string code, [FromBody] VoucherModel update)
         {
+            //Passing in values using "VoucherModel" into the Different Model to use params
+            Voucher voucher = new Voucher(update.Code, update.Voucher_Type, update.Category, update.AdditionalInfo, update.StartDate, update.ExpirationDate, update.Active);
+            Discount discount = new Discount(update.Discount_Type, update.Percent_Off, update.Amount_Off, update.AmountLimit, update.Unit_Off, update.UnitType);
+            Gift gift = new Gift(update.Amount);
+            Redemption redemption = new Redemption(update.Quantity);
+            Code_Config code_Config = new Code_Config(update.Prefix, update.Suffix, update.CodeLength, update.CharSet);
+            MetaData metadata = new MetaData(update.Test, update.Locale);
 
-            return new JsonResult(Response);
+            //Run CreateVoucherAsync Service and returns response with ServiceResponse class
+            ServiceResponse response = await CreateVoucherRequest.CreateVoucherAsync(voucher, discount, gift, redemption, code_Config, metadata);
+
+            //Checks if response status code is 200, if true returns voucher params and values as Json data, else returns response(Not successful)
+            switch (Response.StatusCode == 200)
+            {
+                case true:
+                    return Ok(update);
+                default:
+                    return Ok(response);
+            }
         }
 
         [HttpDelete("{code}")]
-        public async Task<ActionResult> Delete(string code)
+        public async Task<ActionResult> DeleteVoucher(string code)
         {
             return new JsonResult(Response);
         }
 
         [HttpGet]
-        public async Task<ActionResult> GetList()
+        public async Task<ActionResult> GetVoucherList()
         {
             return new JsonResult(Response);
         }

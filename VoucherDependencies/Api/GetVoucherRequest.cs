@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -10,34 +11,33 @@ using VoucherDependencies.Model;
 
 namespace VoucherDependencies.Api
 {
-    public class GetVoucherRequest
+    public class GetVoucherRequest : BaseService
     {
-        static string strConnectionString = "User Id=sa;Password=Deolu007@;Database=VoucherTest;";
+        public GetVoucherRequest(IConfiguration config) : base(config)
+        {
+        }
 
-      
         //Dapper method to use code param to get voucher from database..
         public static async Task<VoucherModel> GetVoucherAsync(string code)
         {
             VoucherModel voucher = new VoucherModel();
 
-            using (var connection = new SqlConnection(strConnectionString))
+            using (var conn = Connection )
             {
-                await connection.OpenAsync();
+                if (conn.State == System.Data.ConnectionState.Closed)
+                    conn.Open();
 
-                IDataReader reader = await connection.ExecuteReaderAsync("GetVoucherByCode",
+                IDataReader reader = await conn.ExecuteReaderAsync("GetVoucherByCode",
                                 new { Code = code },
                                 commandType: CommandType.StoredProcedure);
-
                
                 //Reader appending the values while stream is open to print out
                 while (reader.Read())
                 {
                     voucher.Code = reader["code"].ToString();
                     voucher.Amount = Convert.ToInt64(reader["giftAmount"].ToString());
-
                 }
-                reader.Close();
-                
+                reader.Close();        
             }
             return voucher;
         }

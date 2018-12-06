@@ -34,6 +34,9 @@
     <Reference Include="Dapper, Version=1.50.5.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.1.50.5\lib\net451\Dapper.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions">
+      <HintPath>..\..\..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.extensions.configuration.abstractions\2.1.1\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\packages\NLog.4.5.11\lib\net45\NLog.dll</HintPath>
     </Reference>
@@ -56,9 +59,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Api\CreateCode.cs" />
+    <Compile Include="Api\BaseService.cs" />
+    <Compile Include="Api\CreateCodeRequest.cs" />
     <Compile Include="Api\CreateVoucherRequest.cs" />
     <Compile Include="Api\GetVoucherRequest.cs" />
+    <Compile Include="Api\UpdateVoucherRequest.cs" />
     <Compile Include="Domain\Code_Config.cs" />
     <Compile Include="Domain\Discount.cs" />
     <Compile Include="Domain\Gift.cs" />

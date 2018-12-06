@@ -1,33 +1,30 @@
-﻿using Dapper;
-using Microsoft.Extensions.Configuration;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Dapper;
+using Microsoft.Extensions.Configuration;
 using VoucherDependencies.Domain;
 using VoucherDependencies.Util;
 
 namespace VoucherDependencies.Api
 {
-    public class CreateVoucherRequest : BaseService
+    public class UpdateVoucherRequest : BaseService
     {
-       
-        public CreateVoucherRequest(IConfiguration config) : base(config)
+        public UpdateVoucherRequest(IConfiguration config) : base(config)
         {
         }
 
-        public static async Task<ServiceResponse> CreateVoucherAsync(Voucher voucher, Discount discount, Gift gift, Redemption redemption, Code_Config code_Config, MetaData metaData) {
-
+        public async static Task<ServiceResponse> UpdateVoucherAsync(Voucher voucher, Discount discount, Gift gift, Redemption redemption, Code_Config codeconfig, MetaData metaData)
+        {
+            ServiceResponse sresponse = null;
             try
             {
-                int rowAffected = 0;
                 using (var conn = Connection)
                 {
-                    if (conn.State == ConnectionState.Closed)
-                        conn.Open();
+                    if(conn.State == System.Data.ConnectionState.Closed)
+                    conn.Open();
 
                     //Parameters Declaration to be passed into Stored procdure "InsertVoucher"..
                     DynamicParameters parameters = new DynamicParameters();
@@ -38,7 +35,7 @@ namespace VoucherDependencies.Api
                     parameters.Add("@DiscountAmountOff", discount.Amount_Off);
                     parameters.Add("@DiscountAmountLimit", discount.AmountLimit);
                     parameters.Add("@DiscountUnitOff", discount.Unit_Off);
-                    parameters.Add("@DiscountUnitType",discount.Unit_Type);
+                    parameters.Add("@DiscountUnitType", discount.Unit_Type);
                     parameters.Add("@GiftAmount", gift.Amount);
                     parameters.Add("@VoucherCategory", voucher.Category);
                     parameters.Add("@VoucherAdditionalInfo", voucher.Additional_Info);
@@ -46,30 +43,22 @@ namespace VoucherDependencies.Api
                     parameters.Add("@VoucherExpirationDate", voucher.Expiration_Date);
                     parameters.Add("@VoucherActiveStatus", voucher.Active);
                     parameters.Add("@RedemptionQuantity", redemption.Quantity);
-                    parameters.Add("@CodePrefix", code_Config.prefix);
-                    parameters.Add("@CodeSuffix", code_Config.suffix);
-                    parameters.Add("@CodeLength", code_Config.length);
-                    parameters.Add("@CodeCharset", code_Config.charset);
-                    parameters.Add("@VoucherMetaData",metaData.Meta_Data);
+                    parameters.Add("@CodePrefix", codeconfig.prefix);
+                    parameters.Add("@CodeSuffix", codeconfig.suffix);
+                    parameters.Add("@CodeLength", codeconfig.length);
+                    parameters.Add("@CodeCharset", codeconfig.charset);
+                    parameters.Add("@VoucherMetaData", metaData.Meta_Data);
 
-                    rowAffected = await conn.ExecuteAsync("InsertVoucher", parameters, commandType: CommandType.StoredProcedure);
+                    await conn.ExecuteAsync("UpdateVoucher",parameters,commandType: System.Data.CommandType.StoredProcedure);
+                    sresponse = new ServiceResponse("200","Successful","Voucher has been Updated");
+                    
                 }
-
-                //response using predefined serviceresponse class
-               ServiceResponse response = new ServiceResponse("0", "Good Request", "Request Completed");
-               return response;
+                return sresponse;
             }
-            catch (Exception e)
+            catch (AggregateException ae)
             {
-                //error response
-                ServiceResponse response = new ServiceResponse("100","Unsuccessful","Request could not be completed");
-                return response;
+                return sresponse = new ServiceResponse("400","Unsuccessful",ae.Message);
             }
-            
         }
-
-       
-        
-        
     }
 }
