@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.106
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Couponize_Voucher_API", "Couponize_Voucher_API\Couponize_Voucher_API.csproj", "{84FF8925-E381-46C5-8F6D-4C8658F27A22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Couponize_Voucher_API", "Couponize_Voucher_API\Couponize_Voucher_API.csproj", "{84FF8925-E381-46C5-8F6D-4C8658F27A22}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VoucherDependencies", "VoucherDependencies\VoucherDependencies.csproj", "{1360D8F4-F7F4-4FA6-B3A7-54E5C9B96602}"
 EndProject

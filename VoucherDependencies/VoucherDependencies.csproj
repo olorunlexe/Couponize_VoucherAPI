@@ -70,6 +70,7 @@
     <Compile Include="Domain\MetaData.cs" />
     <Compile Include="Domain\Redemption.cs" />
     <Compile Include="Domain\Voucher.cs" />
+    <Compile Include="Domain\GeneratedCode.cs" />
     <Compile Include="Model\VoucherModel.cs" />
     <Compile Include="Util\ApiAdvice.cs" />
     <Compile Include="Util\CodeGenerator.cs" />

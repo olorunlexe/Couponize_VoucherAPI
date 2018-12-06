@@ -14,13 +14,14 @@ namespace VoucherDependencies.Api
     public class CreateCodeRequest
     {
 
-        public static async Task<string> CreateCode(Code_Config code_Config)
+        public static async Task<GeneratedCode> CreateCode(Code_Config code_Config)
         {
 
             try
             {
                 CodeGenerator codeGenerator = new CodeGenerator();
-                string result=await codeGenerator.GetGeneratedCode(code_Config.prefix, code_Config.suffix, code_Config.length, code_Config.charset);
+                GeneratedCode result = new GeneratedCode();
+                result.VoucherCode = await codeGenerator.GetGeneratedCode(code_Config.prefix, code_Config.suffix, code_Config.length, code_Config.charset);
 
                 //response using predefined serviceresponse class
                 ServiceResponse response = new ServiceResponse("0", "Good Request", "Request Completed");

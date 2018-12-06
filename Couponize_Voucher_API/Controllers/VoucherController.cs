@@ -62,9 +62,9 @@ namespace Couponize_Voucher_API.Controllers
         public async Task<ActionResult> CreateCode([FromBody] Code_Config code_Config)
         {
 
-            string result = await VoucherDependencies.Api.CreateCodeRequest.CreateCode(code_Config);
-
-            return Ok(result);
+            GeneratedCode code = new GeneratedCode();
+            code = await CreateCodeRequest.CreateCode(code_Config);
+            return Ok(code);
 
         }
 
